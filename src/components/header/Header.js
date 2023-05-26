@@ -1,15 +1,21 @@
 import { useState } from "react"
 import { navData } from "./navdata"
 import Navdrop from "./Navdrop"
+import NavButton from "./NavButton"
 
 function Header() {
     const [navDrop, setNavDrop] = useState("Hide")
 
-    const navElements = navData.map(item => <h2 key={item.title}>{item.title}</h2>)
+    const navButtons = navData.map(item => (
+        <NavButton key={item.title} title={item.title} dropState={{navDrop, setNavDrop}}/>
+    ))
 
     return (
-        <>
-            { navDrop != "Hide" && <Navdrop dropType={navDrop}/> }
+        <>  
+            <div className="navBar">
+                {navButtons}
+            </div>
+            { navDrop !== "Hide" && <Navdrop dropType={navDrop}/> }
         </>
     )
 }
