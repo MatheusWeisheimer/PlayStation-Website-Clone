@@ -11,12 +11,15 @@ function Header() {
     ))
 
     return (
-        <>  
-            <div className="navBar">
-                {navButtons}
+        <header className="header">
+            <div className="main-header">
+                <div className="navBar">
+                    {navButtons}
+                </div>
+            <button>Sign In</button>
             </div>
             { navDrop !== "Hide" && <Navdrop dropType={navDrop}/> }
-        </>
+        </header>
     )
 }
 
