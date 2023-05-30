@@ -1,0 +1,23 @@
+@font-face {
+    font-family: sst;
+    src: url(./assets/fonts/sst/SSTLight.TTF);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: sst;
+    src: url(./assets/fonts/sst/SSTMedium.TTF);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: sst;
+    src: url(./assets/fonts/sst/SSTBold.TTF);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: sst;
+    src: url(./assets/fonts/sst/SSTHeavy.TTF);
+    font-weight: 700;
+}

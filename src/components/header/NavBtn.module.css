@@ -1,0 +1,26 @@
+@import '../../fonts.css';
+
+* {
+    font-family: sst;
+    font-weight: 500;
+}
+
+.container {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow {
+    width: .65rem;
+    margin-top: .3rem;
+    margin-left: .25rem;
+    transition: transform 0.15s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
