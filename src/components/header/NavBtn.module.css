@@ -1,17 +1,18 @@
 @import '../../fonts.css';
 
-* {
+.container {
     font-family: sst;
     font-weight: 500;
-}
-
-.container {
     background-color: transparent;
     border: none;
     padding: 0;
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+.btnTitle:hover, .btnTitle:active {
+    color: #0170CC;
 }
 
 .arrow {

@@ -6,13 +6,16 @@ function Navdrop(props) {
 
     const iconSectionEls = currentData.iconSection.map(item => (
         <div className={NavdropCSS.iconElement} key={item}>
-            <img src={require(`../../assets/images/${getImageName(item)}.png`)} />
+            <img className={NavdropCSS.iconImage} src={require(`../../assets/images/${getImageName(item)}.png`)} />
             <span className={NavdropCSS.iconTitle}>{item}</span>
         </div>
     ))
     
     const dotSectionEls = currentData.dotSection.map(item => (
-        <span>{item}</span>
+        <div className={NavdropCSS.dotEl}>
+            <div className={NavdropCSS.dot}></div>
+            <span className={NavdropCSS.dotTitle}>{item}</span>
+        </div>
     ))
 
     function getImageName(elementName) {
@@ -20,7 +23,7 @@ function Navdrop(props) {
     }
 
     return (
-            <div>
+            <div className={NavdropCSS.navdrop}>
                 <div className={NavdropCSS.iconSection}>
                     {iconSectionEls}
                 </div>

@@ -1,18 +1,78 @@
+@import "../../fonts.css";
+
+.navdrop {
+    font-family: sst;
+    font-weight: 500;
+}
+
+/* Icon section */
+
 .iconSection {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem
-}
-
-.dotSection {
-    display: flex;
-    gap: 3rem
+    gap: .5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(200, 200, 200);
 }
 
 .iconElement {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 8.75rem;
+    height: 8.1rem;
+    border-radius: 2px;
 }
+
+.iconElement:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.iconImage {
+    transform: scale(50%);
+    margin-bottom: 2rem;
+}
+
+.iconTitle {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    margin-bottom: 1.25rem;
+    width: 80%;
+}
+
+/* Dot section */
+
+.dotSection {
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 8px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.dotEl {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: #0170CC;
+    margin-top: .2rem;
+    margin-right: .4rem;
+}
+
+.dotTitle:hover {
+    color: #0170CC;
+}
+
+

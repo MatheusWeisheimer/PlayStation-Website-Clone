@@ -13,7 +13,7 @@ function NavBtn(props) {
 
     return (
         <button onClick={handleClick} className={NavBtnCSS.container}>
-            <span>{title}</span>
+            <span className={NavBtnCSS.btnTitle}>{title}</span>
             <img className={`${NavBtnCSS.arrow} ${dropState === title ? NavBtnCSS.rotate : ''}`} src={require(`../../assets/images/${dropState === title ? "filled" : "unfilled" }-arrow.png`)} alt="arrow pointing down" />
         </button>
     )
