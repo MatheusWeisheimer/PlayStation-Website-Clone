@@ -12,12 +12,12 @@ function Navbar(props) {
     return (
         <div className="nav-broad-container">
             <div className="nav-section-container">
-                <img className="ps-nav-logo" src={require("../../assets/images/playstation-logo.png")} />
+                <img className="ps-nav-logo" src={require("../../assets/images/playstation-logo.png")} alt="playstation logo" />
                 <div className="nav-btn-container">{navBtnEls}</div>
             </div>
             <div className="nav-section-container">
                 <button className="nav-sign-btn">Sign In</button>
-                <img className="nav-search-icon" src={require("../../assets/images/search-glass.png")} />
+                <img className="nav-search-icon" src={require("../../assets/images/search-glass.png")} alt="magnifying glass icon" />
             </div>
         </div>
     )

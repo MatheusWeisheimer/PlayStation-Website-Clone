@@ -1,6 +1,7 @@
 @import "../../fonts.css";
 
 .navdrop-container {
+    color: #1f1f1f;
     font-family: sst;
     font-weight: 500;
 }
@@ -50,18 +51,23 @@
 /* Dot section */
 
 .navdrop-dot-section {
-    padding: 1.5rem 0;
+    text-align: center;
+    padding: 1.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     box-shadow: 0 8px 5px 1px rgba(0, 0, 0, 0.2);
+    gap: 2rem;
 }
 
 .navdrop-dot-el {
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+.navdrop-dot-el:last-child {
+    margin-right: 0;
 }
 
 .navdrop-dot-dot {
@@ -76,5 +82,11 @@
 .navdrop-dot-title:hover {
     color: #0170CC;
 }
+
+@media (max-width: 850px) {
+    .navdrop-dot-title {
+      font-size: .7rem
+    }
+  }
 
 

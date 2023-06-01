@@ -1,8 +1,10 @@
 @import "../../fonts.css";
 
 .nav-btn {
+    color: #1f1f1f;
     font-family: sst;
     font-weight: 500;
+    font-size: .8rem;
     background-color: transparent;
     border: none;
     padding: 0;
