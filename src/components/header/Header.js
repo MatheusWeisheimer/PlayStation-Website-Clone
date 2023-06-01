@@ -1,5 +1,5 @@
 import { useState } from "react"
-import HeaderCSS from "./Header.module.css"
+import "./Header.css"
 import Navbar from "./Navbar"
 import Navdrop from "./Navdrop"
 
@@ -7,8 +7,8 @@ function Header() {
     const [dropState, setDropState] = useState("Hide")
 
     return (
-        <header className="headerContainer">
-            <div className="main-header">
+        <header className="header-container">
+            <div>
                 <Navbar dropState={{dropState, setDropState}} />
             </div>
             { dropState !== "Hide" && <Navdrop dropType={dropState}/> }

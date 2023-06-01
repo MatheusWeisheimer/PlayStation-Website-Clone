@@ -1,6 +1,6 @@
-@import '../../fonts.css';
+@import "../../fonts.css";
 
-.container {
+.nav-btn {
     font-family: sst;
     font-weight: 500;
     background-color: transparent;
@@ -11,17 +11,21 @@
     cursor: pointer;
 }
 
-.btnTitle:hover, .btnTitle:active {
+.nav-btn-title:hover, .nav-btn-title:active {
     color: #0170CC;
 }
 
-.arrow {
+.nav-btn-title-opened {
+    color: #0170CC
+}
+
+.nav-btn-arrow {
     width: .65rem;
     margin-top: .3rem;
     margin-left: .25rem;
     transition: transform 0.15s;
 }
 
-.rotate {
+.nav-btn-arrow-rotate {
     transform: rotate(180deg);
 }

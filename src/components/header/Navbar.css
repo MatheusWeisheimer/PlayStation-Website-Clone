@@ -1,25 +1,25 @@
-.navContainer {
+.nav-broad-container {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem;
 }
 
-.container {
+.nav-section-container {
     display: flex;
     align-items: center;
 }
 
-.psLogo  {
+.ps-nav-logo  {
     width: 2.65rem;
     margin-right: 1.0rem;
 }
 
-.navButtons {
+.nav-btn-container {
     display: flex;
     gap: .75rem;
 }
 
-.signBtn {
+.nav-sign-btn {
     color: white;
     background-color: #0170CC;
     font-size: 1rem;
@@ -30,8 +30,12 @@
     margin-right: 2.0rem;
 }
 
-.searchGlass {
+.nav-sign-btn:hover {
+    background-color: 	#005499;
+}
+
+.nav-search-icon {
     width: 1.25rem;
 }
 
-.signBtn, .searchGlass { cursor: pointer; }
+.nav-sign-btn, .nav-search-icon { cursor: pointer; }

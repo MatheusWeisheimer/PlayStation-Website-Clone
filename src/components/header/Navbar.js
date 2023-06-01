@@ -1,5 +1,5 @@
 import { navData } from "./navdata" 
-import NavbarCSS from "./Navbar.module.css"
+import "./Navbar.css"
 import NavBtn from "./NavBtn"
 
 function Navbar(props) {
@@ -10,14 +10,14 @@ function Navbar(props) {
     ))
 
     return (
-        <div className={NavbarCSS.navContainer}>
-            <div className={NavbarCSS.container}>
-                <img className={NavbarCSS.psLogo} src={require("../../assets/images/playstation-logo.png")} />
-                <div className={NavbarCSS.navButtons}>{navBtnEls}</div>
+        <div className="nav-broad-container">
+            <div className="nav-section-container">
+                <img className="ps-nav-logo" src={require("../../assets/images/playstation-logo.png")} />
+                <div className="nav-btn-container">{navBtnEls}</div>
             </div>
-            <div className={NavbarCSS.container}>
-                <button className={NavbarCSS.signBtn}>Sign In</button>
-                <img className={NavbarCSS.searchGlass} src={require("../../assets/images/search-glass.png")} />
+            <div className="nav-section-container">
+                <button className="nav-sign-btn">Sign In</button>
+                <img className="nav-search-icon" src={require("../../assets/images/search-glass.png")} />
             </div>
         </div>
     )
