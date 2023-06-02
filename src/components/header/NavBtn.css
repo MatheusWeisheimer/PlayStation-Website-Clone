@@ -4,30 +4,52 @@
     color: #1f1f1f;
     font-family: sst;
     font-weight: 500;
-    font-size: .8rem;
+    font-size: 1rem;
     background-color: transparent;
+    width: 100%;
+    padding: 1rem 1rem 1rem 1.5rem;
     border: none;
-    padding: 0;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.nav-btn-title:hover, .nav-btn-title:active {
+.nav-btn:hover {
     color: #0170CC;
 }
 
-.nav-btn-title-opened {
-    color: #0170CC
+.nav-btn-icon {
+    width: 1.6rem;
+    margin-right: 1.4rem;
 }
 
 .nav-btn-arrow {
     width: .65rem;
-    margin-top: .3rem;
-    margin-left: .25rem;
-    transition: transform 0.15s;
+    transform: rotate(-90deg);
+    margin-left: auto;
 }
 
-.nav-btn-arrow-rotate {
-    transform: rotate(180deg);
+@media (min-width: 700px) {
+    .nav-btn {
+        font-size: .8rem;
+        width: fit-content;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-btn-icon {
+        display: none;
+    }
+    
+    .nav-btn-arrow {
+        transform: rotate(0);
+        transition: transform 0.15s;
+        margin-top: .3rem;
+        margin-left: .25rem;
+    }
+
+    .nav-btn-arrow-rotate {
+        transform: rotate(180deg);
+    }
 }

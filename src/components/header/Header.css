@@ -1,5 +1,84 @@
-.headerContainer {
+.main-header-container {
     font-weight: 500;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem 1rem;
+}
+
+.header-icon-container {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.header-navbar-icon {
+    width: 1.5rem;
+}
+
+.header-search-icon {
+    width: 1.3rem;
+}
+
+.ps-header-logo  {
+    width: 2.5rem;
+}
+
+.header-sign-btn {
+    color: white;
+    background-color: #0170CC;
+    font-size: 1rem;
+    padding: 0 .75rem .25rem .75rem;
+    border: none;
+    border-radius: 16px;
+}
+
+.header-sign-btn:hover {
+    background-color: 	#005499;
+}
+
+.header-sign-btn, .header-search-icon, .header-navbar-icon, .ps-header-logo { cursor: pointer; }
+
+.header-navbar {
+    position: absolute;
+    left: 0;
+    top: 3.9rem;
+    width: 100%;
+}
+
+.header-navbar-toggle {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    .main-header-container {
+        justify-content: center;
+        padding: 1rem 1.75rem;
+    }
+
+    .main-header-container .ps-header-logo {order: 1;}
+    .main-header-container .header-navbar {order: 2;}
+    .main-header-container .header-sign-btn {order: 3;}
+    .main-header-container .header-icon-container {order: 4;}
+
+    .header-sign-btn {
+        margin-right: 1rem;
+    }
+
+    .header-navbar {
+        position: static;
+        width: fit-content;
+        margin-right: auto;
+        margin-left: 1rem;
+    }
+
+    .header-navbar-toggle, .header-navbar {
+        display: flex;
+        gap: .8rem;
+    }
+
+    .header-navbar-icon {
+        display: none;
+    }
 }
