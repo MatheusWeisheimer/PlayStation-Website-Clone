@@ -1,12 +1,60 @@
 @import "../../fonts.css";
 
 .navdrop-container {
+    background-color: white;
+    font-size: .85rem;
+    font-family: sst;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 4.55rem);
+    margin-left: auto;
+}
+
+.navdrop-icon-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.navdrop-icon-section > * {
+    flex: 50%;
+    box-sizing: border-box;
+}
+
+.navdrop-icon-el {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.navdrop-icon-el:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.navdrop-icon-image {
+    transform: scale(33%);
+}
+
+.navdrop-icon-title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    margin-bottom: 1.2rem;
+}
+
+/* .navdrop-container {
     color: #1f1f1f;
     font-family: sst;
     font-weight: 500;
 }
-
-/* Icon section */
 
 .navdrop-icon-section {
     display: flex;
@@ -48,8 +96,6 @@
     width: 80%;
 }
 
-/* Dot section */
-
 .navdrop-dot-section {
     text-align: center;
     padding: 1.5rem 1rem;
@@ -87,6 +133,6 @@
     .navdrop-dot-title {
       font-size: .7rem
     }
-  }
+  } */
 
 

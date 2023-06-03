@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { navData } from "./navdata"
 import "./Header.css"
 import NavBtn from "./NavBtn"
@@ -23,7 +23,7 @@ function Header() {
         <header>
             <div className="main-header-container">
                 <div className="header-icon-container">
-                    <img className="header-navbar-icon" onClick={toggleNav} src={require(`../../assets/images/header-nav-${mobileNavOn ? "close" : "icon"}.png`)} />
+                    <img className="header-navbar-icon" onClick={toggleNav} src={require(`../../assets/images/header-nav-${mobileNavOn ? "close" : "icon"}.png`)} alt="toggle navbar button" />
                     <img className="header-search-icon" src={require("../../assets/images/search-glass.png")} alt="magnifying glass icon" />
                 </div>
                 <img className="ps-header-logo" src={require("../../assets/images/playstation-logo.png")} alt="playstation logo" />
