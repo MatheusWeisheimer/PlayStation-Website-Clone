@@ -41,8 +41,16 @@
         margin-top: 0;
     }
 
+    .nav-btn-background-blue {
+        background-color: transparent;
+    }
+
     .nav-btn-icon {
         display: none;
+    }
+
+    .nav-btn-title-opened {
+        color: #0170CC;
     }
     
     .nav-btn-arrow {

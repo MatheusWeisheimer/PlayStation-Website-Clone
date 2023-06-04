@@ -57,6 +57,7 @@
     .main-header-container {
         justify-content: center;
         padding: 1rem 1.75rem;
+        box-shadow: none;
     }
 
     .main-header-container .ps-header-logo {order: 1;}

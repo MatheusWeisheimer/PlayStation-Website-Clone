@@ -16,6 +16,8 @@
     box-shadow: -4px 10px 27px -2px #ccc;
 }
 
+.navdrop-close-btn, .navdrop-icon-el, .navdrop-dot-el { cursor: pointer; }
+
 /* title section */
 
 .navdrop-title-section {
@@ -30,9 +32,9 @@
     cursor: pointer;
 }
 
-/* icon section */
+/* card section */
 
-.navdrop-icon-section {
+.navdrop-card-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -40,32 +42,56 @@
     border-bottom: 1px solid rgb(200, 200, 200)
 }
 
-.navdrop-icon-el {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    width: 47.5%;
-    min-width: 8rem;
-    height: 5rem;
-    border-radius: 2px;
-    cursor: pointer;
-}
-
-.navdrop-icon-el:hover {
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-}
-
-.navdrop-icon-image {
-    transform: scale(33%);
-}
-
-.navdrop-icon-title {
-
-}
-
 /* dot section */
 
 .navdrop-dot-el {
     margin-top: 1.5rem;
+}
+
+@media (min-width: 700px) {
+
+    .navdrop-container {
+        width: 100%;
+        height: 14rem;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0px 10px 5px 0px #ccc;
+    }
+
+    /* title section */
+
+    .navdrop-title-section {
+        display: none;
+    }
+
+    /* card section */
+
+    .navdrop-card-section {
+        box-sizing: border-box;
+        justify-content: center;
+        height: calc(100% - 3.75rem);
+        padding: 1rem;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    /* dot section */
+
+    .navdrop-dot-section {
+        box-sizing: border-box;
+        height: 3.75rem;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .navdrop-dot-el {
+        margin: 0;
+    }
+
+    .navdrop-dot-el:hover {
+        color: #0170CC;
+    }
 }
