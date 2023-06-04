@@ -5,6 +5,7 @@
     justify-content: space-between;
     position: relative;
     padding: 1rem 1rem;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 .header-icon-container {
@@ -14,11 +15,11 @@
 }
 
 .header-navbar-icon {
-    width: 1.5rem;
+    width: 1.2rem;
 }
 
 .header-search-icon {
-    width: 1.3rem;
+    width: 1rem;
 }
 
 .ps-header-logo  {
@@ -45,6 +46,7 @@
     left: 0;
     top: 3.9rem;
     width: 100%;
+    margin-top: .6rem;
 }
 
 .header-navbar-toggle {

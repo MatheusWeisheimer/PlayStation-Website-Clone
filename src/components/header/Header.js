@@ -32,7 +32,7 @@ function Header() {
                     {navBtnElements}
                 </nav>
             </div>
-            { dropState !== "Hide" && <Navdrop dropType={dropState}/> }
+            { dropState !== "Hide" && <Navdrop dropState={{dropState, setDropState}}/> }
         </header>
     )
 }

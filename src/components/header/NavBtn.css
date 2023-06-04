@@ -7,12 +7,15 @@
     font-size: 1rem;
     background-color: transparent;
     width: 100%;
-    padding: 1rem 1rem 1rem 1.5rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     border: none;
-    margin-top: 1rem;
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+.nav-btn-background-blue {
+    background-color: #EAF7FF;
 }
 
 .nav-btn:hover {
@@ -21,7 +24,7 @@
 
 .nav-btn-icon {
     width: 1.6rem;
-    margin-right: 1.4rem;
+    margin-right: 1.5rem;
 }
 
 .nav-btn-arrow {
