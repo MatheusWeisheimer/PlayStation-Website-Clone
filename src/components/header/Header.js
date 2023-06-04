@@ -23,7 +23,7 @@ function Header() {
         <header>
             <div className="main-header-container">
                 <div className="header-icon-container">
-                    <img className="header-navbar-icon" onClick={toggleNav} src={require(`../../assets/images/header-nav-${mobileNavOn ? "close" : "icon"}.png`)} alt="toggle navbar button" />
+                    <img className="header-navbar-icon" onClick={() => {toggleNav(); setDropState("Hide")}} src={require(`../../assets/images/header-nav-${mobileNavOn ? "close" : "icon"}.png`)} alt="toggle navbar button" />
                     <img className="header-search-icon" src={require("../../assets/images/search-glass.png")} alt="magnifying glass icon" />
                 </div>
                 <img className="ps-header-logo" src={require("../../assets/images/playstation-logo.png")} alt="playstation logo" />
