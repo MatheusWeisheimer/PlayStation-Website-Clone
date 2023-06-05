@@ -6,7 +6,7 @@ import Navdrop from "./Navdrop"
 
 function Header() {
     const [mobileNavOn, setMobileNavOn] = useState(false)
-    const [dropState, setDropState] = useState("Hide")
+    const [dropState, setDropState] = useState("Games")
 
     const navRef = useRef()
 
@@ -32,7 +32,7 @@ function Header() {
                     {navBtnElements}
                 </nav>
             </div>
-            { dropState !== "Hide" && <Navdrop dropState={{dropState, setDropState}}/> }
+            <Navdrop dropState={{dropState, setDropState}}/>
         </header>
     )
 }

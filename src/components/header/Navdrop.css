@@ -1,19 +1,27 @@
 @import "../../fonts.css";
 
 .navdrop-container {
+    z-index: 3;
+    visibility: hidden;
+    transform: translateX( calc(100%) );
+    transition: .75s ease;
     box-sizing: border-box;
     background-color: white;
     font-size: .85rem;
     font-family: sst;
     font-weight: 500;
     position: relative;
-    z-index: 1;
     width: calc(100% - 4.6rem);
     height: 800px;
     padding: 1rem;
     margin-left: auto;
     margin-top: .6rem;
     box-shadow: -4px 10px 27px -2px #ccc;
+}
+
+.navdrop-dropdown {
+    visibility: visible;
+    transform: translateX(0);
 }
 
 .navdrop-close-btn, .navdrop-icon-el, .navdrop-dot-el { cursor: pointer; }
@@ -51,11 +59,19 @@
 @media (min-width: 700px) {
 
     .navdrop-container {
+        z-index: 1;
+        transform: translateY(-100%);
         width: 100%;
         height: 14rem;
         padding: 0;
         margin: 0;
         box-shadow: 0px 10px 5px 0px #ccc;
+    }
+
+    .navdrop-dropdown {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     /* title section */
@@ -88,10 +104,23 @@
     }
 
     .navdrop-dot-el {
+        font-size: .8rem;
+        text-align: center;
         margin: 0;
+        display: flex;
+        align-items: center;
+        gap: .4rem;
     }
 
     .navdrop-dot-el:hover {
         color: #0170CC;
     }
+
+    .navdrop-dot-dot {
+        background-color: #0170CC;
+        width: .45rem;
+        height: .45rem;
+        border-radius: 50%;
+    }
 }
+
