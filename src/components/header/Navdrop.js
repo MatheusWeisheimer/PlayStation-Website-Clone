@@ -20,7 +20,7 @@ function Navdrop(props) {
             <div className={`navdrop-container ${isDropHidden ? "" : "navdrop-dropdown"}`}>
                 <div className="navdrop-title-section">
                     <img onClick={() => setIsDropHidden(true)} className="navdrop-close-btn" src={require("../../assets/images/drop-menu-icon.png")} alt="close navdrop"/>
-                    <p>{dropTitle}</p>
+                    <p className="navdrop-title">{dropTitle}</p>
                 </div>
                 <div className="navdrop-card-section">
                     {cardSectionEls}

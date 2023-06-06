@@ -1,5 +1,6 @@
 .main-header-container {
     background-color: #fff;
+    color: #1f1f1f;
     z-index: 2;
     font-weight: 500;
     display: flex;
@@ -21,11 +22,11 @@
 }
 
 .header-search-icon {
-    width: 1rem;
+    width: 1.2rem;
 }
 
 .ps-header-logo  {
-    width: 2.5rem;
+    width: 2.6rem;
 }
 
 .header-sign-btn {
@@ -57,9 +58,11 @@
 
 @media (min-width: 700px) {
     .main-header-container {
+        font-size: .81rem;
         justify-content: center;
-        padding: 1rem 1.75rem;
+        padding: 1em 1.75rem;
         box-shadow: none;
+        transform: 1s;
     }
 
     .main-header-container .ps-header-logo {order: 1;}
@@ -76,6 +79,14 @@
         width: fit-content;
         margin-right: auto;
         margin-left: 1rem;
+    }
+
+    .header-search-icon {
+        width: 1.5em;
+    }
+    
+    .ps-header-logo  {
+        width: 3.2em;
     }
 
     .header-navbar-toggle, .header-navbar {

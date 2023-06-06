@@ -7,6 +7,8 @@ function NavBtn(props) {
 
     const [hovered, setHovered] = useState(false)
 
+    const btnIsFocused = dropTitle === title && !isDropHidden ? true : false
+
     function handleClick() {
         setDropTitle(title)
         if (isDropHidden) {
@@ -22,7 +24,7 @@ function NavBtn(props) {
     }
 
     function getBtnIcons(title) {
-        if (dropTitle === title) {
+        if (btnIsFocused) {
             return ({
                 icon: `nav-${title}-filled-blue`,
                 arrow: `filled-arrow`
@@ -45,10 +47,10 @@ function NavBtn(props) {
     }
 
     return (
-        <button onClick={handleClick} onMouseEnter={toggleHovered} onMouseLeave={toggleHovered} className={`nav-btn ${dropTitle === title ? "nav-btn-background-blue" : ""}`}>
+        <button onClick={handleClick} onMouseEnter={toggleHovered} onMouseLeave={toggleHovered} className={`nav-btn ${btnIsFocused ? "nav-btn-background-blue" : ""}`}>
             <img className="nav-btn-icon" src={require(`../../assets/images/${getBtnIcons(title).icon}.png`)} alt={`${title} icon`} />
-            <span className={`nav-btn-title ${dropTitle === title ? `nav-btn-title-opened` : ""}`}>{title}</span>
-            <img className={`nav-btn-arrow ${dropTitle === title ? "nav-btn-arrow-rotate" : ""}`} src={require(`../../assets/images/${getBtnIcons(title).arrow}.png`)} alt="arrow icon pointing down" />
+            <span className={`nav-btn-title ${btnIsFocused ? `nav-btn-title-opened` : ""}`}>{title}</span>
+            <img className={`nav-btn-arrow ${btnIsFocused ? "nav-btn-arrow-rotate" : ""}`} src={require(`../../assets/images/${getBtnIcons(title).arrow}.png`)} alt="arrow icon pointing down" />
         </button>
     )
 }

@@ -1,6 +1,7 @@
 @import "../../fonts.css";
 
 .navdrop-container {
+    color: #1f1f1f;
     z-index: 3;
     visibility: hidden;
     transform: translateX( calc(100%) );
@@ -21,7 +22,7 @@
 .navdrop-dropdown {
     visibility: visible;
     transform: translateX(0);
-    transition: .75s;
+    transition: 1.2s;
     box-shadow: -4px 10px 27px -2px #ccc;
 }
 
@@ -33,6 +34,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 1.75rem;
+}
+
+.navdrop-title {
+    color: #616161;
 }
 
 .navdrop-close-btn {
@@ -61,6 +66,7 @@
 
     .navdrop-container {
         z-index: 1;
+        opacity: 0;
         transform: translateY(-100%);
         width: 100%;
         height: 14rem;
