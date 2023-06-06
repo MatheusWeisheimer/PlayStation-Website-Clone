@@ -2,16 +2,19 @@ import { useState } from "react"
 import "./NavBtn.css"
 
 function NavBtn(props) {
-    const {dropState, setDropState} = props.dropState
+    const {dropTitle, setDropTitle, isDropHidden, setIsDropHidden} = props.dropState
     const title = props.title
 
     const [hovered, setHovered] = useState(false)
 
     function handleClick() {
-        if (dropState === title) {
-            setDropState("Hide")
+        setDropTitle(title)
+        if (isDropHidden) {
+            setIsDropHidden(false)
         }
-        else { setDropState(title) }
+        else if (!isDropHidden && dropTitle === title) {
+            setIsDropHidden(true)
+        }
     }
 
     function toggleHovered() {
@@ -19,7 +22,7 @@ function NavBtn(props) {
     }
 
     function getBtnIcons(title) {
-        if (dropState === title) {
+        if (dropTitle === title) {
             return ({
                 icon: `nav-${title}-filled-blue`,
                 arrow: `filled-arrow`
@@ -42,10 +45,10 @@ function NavBtn(props) {
     }
 
     return (
-        <button onClick={handleClick} onMouseEnter={toggleHovered} onMouseLeave={toggleHovered} className={`nav-btn ${dropState === title ? "nav-btn-background-blue" : ""}`}>
+        <button onClick={handleClick} onMouseEnter={toggleHovered} onMouseLeave={toggleHovered} className={`nav-btn ${dropTitle === title ? "nav-btn-background-blue" : ""}`}>
             <img className="nav-btn-icon" src={require(`../../assets/images/${getBtnIcons(title).icon}.png`)} alt={`${title} icon`} />
-            <span className={`nav-btn-title ${dropState === title ? `nav-btn-title-opened` : ""}`}>{title}</span>
-            <img className={`nav-btn-arrow ${dropState === title ? "nav-btn-arrow-rotate" : ""}`} src={require(`../../assets/images/${getBtnIcons(title).arrow}.png`)} alt="arrow icon pointing down" />
+            <span className={`nav-btn-title ${dropTitle === title ? `nav-btn-title-opened` : ""}`}>{title}</span>
+            <img className={`nav-btn-arrow ${dropTitle === title ? "nav-btn-arrow-rotate" : ""}`} src={require(`../../assets/images/${getBtnIcons(title).arrow}.png`)} alt="arrow icon pointing down" />
         </button>
     )
 }
